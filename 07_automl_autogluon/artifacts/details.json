@@ -1,0 +1,9 @@
+{
+  "scores": {
+    "Logistic Regression": 0.9806862288464524,
+    "Random Forest": 0.956078248719143,
+    "Gradient Boosting": 0.9631268436578171,
+    "KNN": 0.9701288619779538
+  },
+  "autogluon_note": "Install AutoGluon to replace the lightweight local tournament."
+}

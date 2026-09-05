@@ -1,0 +1,11 @@
+{
+  "association_proxy": 0.31338028169014087,
+  "crisp_dm_phases": [
+    "Business understanding",
+    "Data understanding",
+    "Data preparation",
+    "Modeling",
+    "Evaluation",
+    "Deployment"
+  ]
+}

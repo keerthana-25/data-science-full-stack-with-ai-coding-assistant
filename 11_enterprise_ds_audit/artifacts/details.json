@@ -1,0 +1,154 @@
+{
+  "projects": [
+    {
+      "project": "01_nyc_taxi_trip_prediction",
+      "score": 100.0,
+      "missing": [],
+      "checks": {
+        "required_files": true,
+        "fixed_seed": true,
+        "experiment_implemented": true
+      }
+    },
+    {
+      "project": "02_nano_llm_transformer",
+      "score": 100.0,
+      "missing": [],
+      "checks": {
+        "required_files": true,
+        "fixed_seed": true,
+        "experiment_implemented": true
+      }
+    },
+    {
+      "project": "03_customer_segmentation_clustering",
+      "score": 100.0,
+      "missing": [],
+      "checks": {
+        "required_files": true,
+        "fixed_seed": true,
+        "experiment_implemented": true
+      }
+    },
+    {
+      "project": "04_associative_pattern_mining",
+      "score": 100.0,
+      "missing": [],
+      "checks": {
+        "required_files": true,
+        "fixed_seed": true,
+        "experiment_implemented": true
+      }
+    },
+    {
+      "project": "05_data_science_skills_lab",
+      "score": 100.0,
+      "missing": [],
+      "checks": {
+        "required_files": true,
+        "fixed_seed": true,
+        "experiment_implemented": true
+      }
+    },
+    {
+      "project": "06_anomaly_detection",
+      "score": 100.0,
+      "missing": [],
+      "checks": {
+        "required_files": true,
+        "fixed_seed": true,
+        "experiment_implemented": true
+      }
+    },
+    {
+      "project": "07_automl_autogluon",
+      "score": 100.0,
+      "missing": [],
+      "checks": {
+        "required_files": true,
+        "fixed_seed": true,
+        "experiment_implemented": true
+      }
+    },
+    {
+      "project": "08_datascience_visual_mastery",
+      "score": 100.0,
+      "missing": [],
+      "checks": {
+        "required_files": true,
+        "fixed_seed": true,
+        "experiment_implemented": true
+      }
+    },
+    {
+      "project": "09_flowforge_dag_engine",
+      "score": 100.0,
+      "missing": [],
+      "checks": {
+        "required_files": true,
+        "fixed_seed": true,
+        "experiment_implemented": true
+      }
+    },
+    {
+      "project": "10_crispdm_masters_curriculum",
+      "score": 100.0,
+      "missing": [],
+      "checks": {
+        "required_files": true,
+        "fixed_seed": true,
+        "experiment_implemented": true
+      }
+    },
+    {
+      "project": "11_enterprise_ds_audit",
+      "score": 100.0,
+      "missing": [],
+      "checks": {
+        "required_files": true,
+        "fixed_seed": true,
+        "experiment_implemented": true
+      }
+    },
+    {
+      "project": "12_timeseries_forecasting",
+      "score": 100.0,
+      "missing": [],
+      "checks": {
+        "required_files": true,
+        "fixed_seed": true,
+        "experiment_implemented": true
+      }
+    },
+    {
+      "project": "13_crispdm_nyc_taxi_audit_platform",
+      "score": 100.0,
+      "missing": [],
+      "checks": {
+        "required_files": true,
+        "fixed_seed": true,
+        "experiment_implemented": true
+      }
+    },
+    {
+      "project": "14_autogluon_multimodal_automl_suite",
+      "score": 100.0,
+      "missing": [],
+      "checks": {
+        "required_files": true,
+        "fixed_seed": true,
+        "experiment_implemented": true
+      }
+    },
+    {
+      "project": "15_spy_timeseries_sota_forecasting",
+      "score": 100.0,
+      "missing": [],
+      "checks": {
+        "required_files": true,
+        "fixed_seed": true,
+        "experiment_implemented": true
+      }
+    }
+  ]
+}

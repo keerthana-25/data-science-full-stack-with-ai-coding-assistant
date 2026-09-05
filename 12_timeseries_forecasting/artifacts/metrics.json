@@ -1,0 +1,6 @@
+{
+  "best_model": "Linear",
+  "MAE": 1.9615952191557076,
+  "RMSE": 2.5226818583169632,
+  "chronological_split": true
+}

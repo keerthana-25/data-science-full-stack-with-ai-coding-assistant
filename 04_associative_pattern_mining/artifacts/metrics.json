@@ -1,0 +1,5 @@
+{
+  "top_rule": "milk -> cereal",
+  "top_lift": 1.4285714285714288,
+  "transactions": 200
+}

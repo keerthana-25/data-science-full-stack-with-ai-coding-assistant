@@ -1,0 +1,29 @@
+{
+  "confusion_matrix": [
+    [
+      12,
+      0,
+      0
+    ],
+    [
+      0,
+      12,
+      1
+    ],
+    [
+      0,
+      2,
+      11
+    ]
+  ],
+  "quizzes": [
+    {
+      "q": "What does a false positive mean?",
+      "a": "The model predicts positive when the true class is negative."
+    },
+    {
+      "q": "Why does gradient descent use a derivative?",
+      "a": "The derivative gives the local slope and direction of greatest increase, so moving opposite reduces loss."
+    }
+  ]
+}

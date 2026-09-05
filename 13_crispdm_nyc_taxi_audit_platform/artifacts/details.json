@@ -1,0 +1,38 @@
+{
+  "feature_importance": [
+    [
+      "distance_miles",
+      0.6634831462674737
+    ],
+    [
+      "hour",
+      0.19620325671109765
+    ],
+    [
+      "dropoff_lon",
+      0.03307624365059178
+    ],
+    [
+      "pickup_lon",
+      0.03290991569006072
+    ],
+    [
+      "dropoff_lat",
+      0.03101279192628084
+    ],
+    [
+      "pickup_lat",
+      0.030570687373285093
+    ],
+    [
+      "passenger_count",
+      0.012743958381210226
+    ]
+  ],
+  "audit": {
+    "target_not_in_features": true,
+    "train_before_test": true,
+    "fixed_seed": true,
+    "preprocessing_scope_ok": true
+  }
+}

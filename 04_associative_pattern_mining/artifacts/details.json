@@ -1,0 +1,52 @@
+{
+  "rules": [
+    {
+      "rule": "milk -> cereal",
+      "support": 0.3,
+      "confidence": 0.4285714285714286,
+      "lift": 1.4285714285714288
+    },
+    {
+      "rule": "cereal -> milk",
+      "support": 0.3,
+      "confidence": 1.0,
+      "lift": 1.4285714285714286
+    },
+    {
+      "rule": "bread -> butter",
+      "support": 0.3,
+      "confidence": 0.5,
+      "lift": 1.25
+    },
+    {
+      "rule": "butter -> bread",
+      "support": 0.3,
+      "confidence": 0.7499999999999999,
+      "lift": 1.2499999999999998
+    },
+    {
+      "rule": "bread -> eggs",
+      "support": 0.3,
+      "confidence": 0.5,
+      "lift": 1.0
+    },
+    {
+      "rule": "butter -> eggs",
+      "support": 0.2,
+      "confidence": 0.5,
+      "lift": 1.0
+    },
+    {
+      "rule": "eggs -> bread",
+      "support": 0.3,
+      "confidence": 0.6,
+      "lift": 1.0
+    },
+    {
+      "rule": "eggs -> butter",
+      "support": 0.2,
+      "confidence": 0.4,
+      "lift": 1.0
+    }
+  ]
+}

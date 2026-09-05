@@ -1,0 +1,13 @@
+{
+  "modalities": [
+    "tabular",
+    "text summary features",
+    "image summary features"
+  ],
+  "scores": {
+    "Logistic": 0.6933333333333334,
+    "Random Forest": 0.6622222222222223,
+    "Gradient Boosting": 0.6622222222222223
+  },
+  "autogluon_optional": true
+}
