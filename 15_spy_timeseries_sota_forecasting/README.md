@@ -1,55 +1,42 @@
 # SPY Time Series Forecasting Lab
 
-## What this project does
+**Domain:** Financial time series
 
-Leakage-safe lagged-return forecasting with walk-forward holdout, directional accuracy, RMSE and simple long/cash strategy diagnostics. Real SPY CSV can replace offline synthetic data.
+## What this does
 
-This project reproduces the main data science idea from the supplied prompt in a way that can run on a normal laptop.
+Leakage-safe lagged-return forecasting with a walk-forward holdout, directional accuracy, RMSE, and a simple long/cash strategy readout.
+
+Forecasts next-day returns with a walk-forward holdout and reports directional accuracy plus a simple trading-strategy readout.
 
 ## Dataset
 
-SPY-style synthetic price series; accepts real CSV input. See `DATASET.md` for the offline reproduction note.
+Reference dataset/theme: **SPY-style synthetic price series; accepts a real SPY CSV**. This project uses a small, deterministic, offline dataset (built-in scikit-learn data or a seeded synthetic equivalent) so it runs the same way on any laptop without external credentials or network access. See `prompts.md` for how this maps to the original prompt.
 
-## CRISP-DM summary
-
-1. **Business understanding:** define the decision or learning goal.
-2. **Data understanding:** inspect the generated or built-in dataset and target.
-3. **Data preparation:** create features and keep preprocessing separate from evaluation data where applicable.
-4. **Modeling:** train the selected model or algorithm.
-5. **Evaluation:** report the main metric and save a plot.
-6. **Deployment/communication:** generate `dashboard.html` and screenshot it.
-
-## Run
-
-From the repository root:
+## How to run
 
 ```bash
+pip install -r requirements.txt      # once, from the repository root
 python 15_spy_timeseries_sota_forecasting/src/experiment.py
 ```
 
-Open `15_spy_timeseries_sota_forecasting/dashboard.html` in a browser after the run.
+Then open `15_spy_timeseries_sota_forecasting/dashboard.html` in a browser.
 
-## Main files
+## Results (this run)
 
-- `src/experiment.py` - experiment entry point
-- `artifacts/metrics.json` - generated metrics
-- `artifacts/result.png` - result visualization
-- `dashboard.html` - student-friendly dashboard
-- `AUDIT_REPORT.md` - checks for leakage and reproducibility
-- `prompts.md` - reproduction prompt
+| Metric | Value |
+|---|---|
+| RMSE | 0.0127 |
+| directional_accuracy | 0.5078 |
+| strategy_test_return | -0.0889 |
+| chronological_split | True |
+
+Full numbers are also saved to `artifacts/metrics.json` and `artifacts/result.png` every time the script runs, so this table never goes stale.
 
 ## Screenshots
 
-### Results view
-
 ![Dashboard results](docs/screenshots/dashboard_01.png)
-
-### CRISP-DM and audit view
-
 ![Dashboard details](docs/screenshots/dashboard_02.png)
 
-## YouTube walkthrough
+## Prompt
 
-Walkthrough video: **ADD_YOUTUBE_LINK_HERE**
-
-The exact speaking notes for this project are also included in the top-level `VIDEO_SCRIPT.md`.
+See [`prompts.md`](prompts.md) for the exact prompt used to build this project.

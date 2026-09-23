@@ -1,55 +1,40 @@
 # Data Science Visual Foundations
 
-## What this project does
+**Domain:** Data science education
 
-Naive Bayes classifier, confusion matrix metrics, gradient descent simulation, visual learning artifacts and quiz bank.
+## What this does
 
-This project reproduces the main data science idea from the supplied prompt in a way that can run on a normal laptop.
+A Naive Bayes classifier, a confusion matrix breakdown, a gradient descent simulation, and a small quiz bank.
+
+Builds classic ML concepts (Naive Bayes, confusion matrix, gradient descent) from first principles instead of only calling a library function.
 
 ## Dataset
 
-Iris + generated mathematical examples. See `DATASET.md` for the offline reproduction note.
+Reference dataset/theme: **Iris + generated mathematical examples**. This project uses a small, deterministic, offline dataset (built-in scikit-learn data or a seeded synthetic equivalent) so it runs the same way on any laptop without external credentials or network access. See `prompts.md` for how this maps to the original prompt.
 
-## CRISP-DM summary
-
-1. **Business understanding:** define the decision or learning goal.
-2. **Data understanding:** inspect the generated or built-in dataset and target.
-3. **Data preparation:** create features and keep preprocessing separate from evaluation data where applicable.
-4. **Modeling:** train the selected model or algorithm.
-5. **Evaluation:** report the main metric and save a plot.
-6. **Deployment/communication:** generate `dashboard.html` and screenshot it.
-
-## Run
-
-From the repository root:
+## How to run
 
 ```bash
+pip install -r requirements.txt      # once, from the repository root
 python 08_datascience_visual_mastery/src/experiment.py
 ```
 
-Open `08_datascience_visual_mastery/dashboard.html` in a browser after the run.
+Then open `08_datascience_visual_mastery/dashboard.html` in a browser.
 
-## Main files
+## Results (this run)
 
-- `src/experiment.py` - experiment entry point
-- `artifacts/metrics.json` - generated metrics
-- `artifacts/result.png` - result visualization
-- `dashboard.html` - student-friendly dashboard
-- `AUDIT_REPORT.md` - checks for leakage and reproducibility
-- `prompts.md` - reproduction prompt
+| Metric | Value |
+|---|---|
+| accuracy | 0.9211 |
+| gradient_steps | 18 |
+
+Full numbers are also saved to `artifacts/metrics.json` and `artifacts/result.png` every time the script runs, so this table never goes stale.
 
 ## Screenshots
 
-### Results view
-
 ![Dashboard results](docs/screenshots/dashboard_01.png)
-
-### CRISP-DM and audit view
-
 ![Dashboard details](docs/screenshots/dashboard_02.png)
 
-## YouTube walkthrough
+## Prompt
 
-Walkthrough video: **ADD_YOUTUBE_LINK_HERE**
-
-The exact speaking notes for this project are also included in the top-level `VIDEO_SCRIPT.md`.
+See [`prompts.md`](prompts.md) for the exact prompt used to build this project.

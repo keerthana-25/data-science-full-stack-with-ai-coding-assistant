@@ -1,6 +1,6 @@
 {
-  "RMSE": 0.012717144607422787,
-  "directional_accuracy": 0.5,
-  "strategy_test_return": -0.10354615944410728,
+  "RMSE": 0.012718632508361914,
+  "directional_accuracy": 0.5078125,
+  "strategy_test_return": -0.08893598272702419,
   "chronological_split": true
 }

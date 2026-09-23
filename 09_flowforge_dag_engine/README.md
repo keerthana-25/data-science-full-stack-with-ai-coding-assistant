@@ -1,55 +1,41 @@
 # FlowForge DAG Engine
 
-## What this project does
+**Domain:** Data pipeline orchestration
 
-Directed acyclic graph validation, topological execution order, task status simulation and dependency visualization.
+## What this does
 
-This project reproduces the main data science idea from the supplied prompt in a way that can run on a normal laptop.
+A directed-acyclic-graph validation step, topological execution ordering, and a task-status simulation.
+
+Validates a task graph is a true DAG, then computes a topological execution order -- the core scheduling logic behind tools like Airflow.
 
 ## Dataset
 
-Synthetic pipeline graph. See `DATASET.md` for the offline reproduction note.
+Reference dataset/theme: **Synthetic pipeline graph**. This project uses a small, deterministic, offline dataset (built-in scikit-learn data or a seeded synthetic equivalent) so it runs the same way on any laptop without external credentials or network access. See `prompts.md` for how this maps to the original prompt.
 
-## CRISP-DM summary
-
-1. **Business understanding:** define the decision or learning goal.
-2. **Data understanding:** inspect the generated or built-in dataset and target.
-3. **Data preparation:** create features and keep preprocessing separate from evaluation data where applicable.
-4. **Modeling:** train the selected model or algorithm.
-5. **Evaluation:** report the main metric and save a plot.
-6. **Deployment/communication:** generate `dashboard.html` and screenshot it.
-
-## Run
-
-From the repository root:
+## How to run
 
 ```bash
+pip install -r requirements.txt      # once, from the repository root
 python 09_flowforge_dag_engine/src/experiment.py
 ```
 
-Open `09_flowforge_dag_engine/dashboard.html` in a browser after the run.
+Then open `09_flowforge_dag_engine/dashboard.html` in a browser.
 
-## Main files
+## Results (this run)
 
-- `src/experiment.py` - experiment entry point
-- `artifacts/metrics.json` - generated metrics
-- `artifacts/result.png` - result visualization
-- `dashboard.html` - student-friendly dashboard
-- `AUDIT_REPORT.md` - checks for leakage and reproducibility
-- `prompts.md` - reproduction prompt
+| Metric | Value |
+|---|---|
+| tasks_completed | 7 |
+| is_dag | True |
+| execution_order | ingest -> validate -> features -> train -> evaluate -> deploy -> monitor |
+
+Full numbers are also saved to `artifacts/metrics.json` and `artifacts/result.png` every time the script runs, so this table never goes stale.
 
 ## Screenshots
 
-### Results view
-
 ![Dashboard results](docs/screenshots/dashboard_01.png)
-
-### CRISP-DM and audit view
-
 ![Dashboard details](docs/screenshots/dashboard_02.png)
 
-## YouTube walkthrough
+## Prompt
 
-Walkthrough video: **ADD_YOUTUBE_LINK_HERE**
-
-The exact speaking notes for this project are also included in the top-level `VIDEO_SCRIPT.md`.
+See [`prompts.md`](prompts.md) for the exact prompt used to build this project.

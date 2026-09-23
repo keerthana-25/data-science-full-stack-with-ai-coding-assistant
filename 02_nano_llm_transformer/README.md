@@ -1,55 +1,40 @@
 # NanoLlama Language Model Lab
 
-## What this project does
+**Domain:** Language modeling
 
-Small character n-gram language-model baseline with deterministic training corpus, perplexity estimate, and text generation. Kept intentionally laptop-friendly.
+## What this does
 
-This project reproduces the main data science idea from the supplied prompt in a way that can run on a normal laptop.
+A small character-level language model trained on a deterministic text corpus, evaluated with perplexity and used to generate text.
+
+Trains a tiny character-level language model end to end and reports perplexity, the same evaluation idea used for much larger models.
 
 ## Dataset
 
-Tiny educational text corpus (offline reproduction). See `DATASET.md` for the offline reproduction note.
+Reference dataset/theme: **Tiny educational text corpus (offline reproduction)**. This project uses a small, deterministic, offline dataset (built-in scikit-learn data or a seeded synthetic equivalent) so it runs the same way on any laptop without external credentials or network access. See `prompts.md` for how this maps to the original prompt.
 
-## CRISP-DM summary
-
-1. **Business understanding:** define the decision or learning goal.
-2. **Data understanding:** inspect the generated or built-in dataset and target.
-3. **Data preparation:** create features and keep preprocessing separate from evaluation data where applicable.
-4. **Modeling:** train the selected model or algorithm.
-5. **Evaluation:** report the main metric and save a plot.
-6. **Deployment/communication:** generate `dashboard.html` and screenshot it.
-
-## Run
-
-From the repository root:
+## How to run
 
 ```bash
+pip install -r requirements.txt      # once, from the repository root
 python 02_nano_llm_transformer/src/experiment.py
 ```
 
-Open `02_nano_llm_transformer/dashboard.html` in a browser after the run.
+Then open `02_nano_llm_transformer/dashboard.html` in a browser.
 
-## Main files
+## Results (this run)
 
-- `src/experiment.py` - experiment entry point
-- `artifacts/metrics.json` - generated metrics
-- `artifacts/result.png` - result visualization
-- `dashboard.html` - student-friendly dashboard
-- `AUDIT_REPORT.md` - checks for leakage and reproducibility
-- `prompts.md` - reproduction prompt
+| Metric | Value |
+|---|---|
+| perplexity | 1.1083 |
+| contexts | 208 |
+
+Full numbers are also saved to `artifacts/metrics.json` and `artifacts/result.png` every time the script runs, so this table never goes stale.
 
 ## Screenshots
 
-### Results view
-
 ![Dashboard results](docs/screenshots/dashboard_01.png)
-
-### CRISP-DM and audit view
-
 ![Dashboard details](docs/screenshots/dashboard_02.png)
 
-## YouTube walkthrough
+## Prompt
 
-Walkthrough video: **ADD_YOUTUBE_LINK_HERE**
-
-The exact speaking notes for this project are also included in the top-level `VIDEO_SCRIPT.md`.
+See [`prompts.md`](prompts.md) for the exact prompt used to build this project.

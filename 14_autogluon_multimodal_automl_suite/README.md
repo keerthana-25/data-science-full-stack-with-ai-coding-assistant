@@ -1,55 +1,40 @@
 # Multimodal AutoML Suite
 
-## What this project does
+**Domain:** Multimodal classification
 
-Combines tabular, simple text-count and image-summary features, then runs an automated classifier tournament. AutoGluon is optional when installed.
+## What this does
 
-This project reproduces the main data science idea from the supplied prompt in a way that can run on a normal laptop.
+Tabular, text-count, and image-summary features combined into one vector, then scored with an automated classifier tournament.
+
+Combines tabular, text, and image-derived features into one feature vector before running the model tournament.
 
 ## Dataset
 
-Synthetic tabular + text + image-signal benchmark. See `DATASET.md` for the offline reproduction note.
+Reference dataset/theme: **Synthetic tabular + text + image-signal benchmark**. This project uses a small, deterministic, offline dataset (built-in scikit-learn data or a seeded synthetic equivalent) so it runs the same way on any laptop without external credentials or network access. See `prompts.md` for how this maps to the original prompt.
 
-## CRISP-DM summary
-
-1. **Business understanding:** define the decision or learning goal.
-2. **Data understanding:** inspect the generated or built-in dataset and target.
-3. **Data preparation:** create features and keep preprocessing separate from evaluation data where applicable.
-4. **Modeling:** train the selected model or algorithm.
-5. **Evaluation:** report the main metric and save a plot.
-6. **Deployment/communication:** generate `dashboard.html` and screenshot it.
-
-## Run
-
-From the repository root:
+## How to run
 
 ```bash
+pip install -r requirements.txt      # once, from the repository root
 python 14_autogluon_multimodal_automl_suite/src/experiment.py
 ```
 
-Open `14_autogluon_multimodal_automl_suite/dashboard.html` in a browser after the run.
+Then open `14_autogluon_multimodal_automl_suite/dashboard.html` in a browser.
 
-## Main files
+## Results (this run)
 
-- `src/experiment.py` - experiment entry point
-- `artifacts/metrics.json` - generated metrics
-- `artifacts/result.png` - result visualization
-- `dashboard.html` - student-friendly dashboard
-- `AUDIT_REPORT.md` - checks for leakage and reproducibility
-- `prompts.md` - reproduction prompt
+| Metric | Value |
+|---|---|
+| best_model | Logistic |
+| accuracy | 0.6933 |
+
+Full numbers are also saved to `artifacts/metrics.json` and `artifacts/result.png` every time the script runs, so this table never goes stale.
 
 ## Screenshots
 
-### Results view
-
 ![Dashboard results](docs/screenshots/dashboard_01.png)
-
-### CRISP-DM and audit view
-
 ![Dashboard details](docs/screenshots/dashboard_02.png)
 
-## YouTube walkthrough
+## Prompt
 
-Walkthrough video: **ADD_YOUTUBE_LINK_HERE**
-
-The exact speaking notes for this project are also included in the top-level `VIDEO_SCRIPT.md`.
+See [`prompts.md`](prompts.md) for the exact prompt used to build this project.

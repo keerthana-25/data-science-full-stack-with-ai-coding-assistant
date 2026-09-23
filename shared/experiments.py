@@ -167,7 +167,7 @@ def run_10(root):
 
 
 def run_11(root):
-    root=Path(root); repo=root.parent; required=['README.md','prompts.md','abstract.md','paper.md','article.md','IMPLEMENTATION_PLAN.md','AUDIT_REPORT.md','skills/SKILL.md','src/experiment.py']
+    root=Path(root); repo=root.parent; required=['README.md','prompts.md','src/experiment.py','dashboard.html','artifacts/metrics.json','artifacts/result.png']
     shared=(repo/'shared'/'experiments.py').read_text(errors='ignore')
     rows=[]
     for p in sorted(repo.glob('[0-9][0-9]_*')):

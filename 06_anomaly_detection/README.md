@@ -1,55 +1,41 @@
 # Anomaly Threat Intelligence
 
-## What this project does
+**Domain:** Anomaly detection
 
-Synthetic normal and anomalous points, Isolation Forest scoring, ROC-AUC evaluation, visual inspection.
+## What this does
 
-This project reproduces the main data science idea from the supplied prompt in a way that can run on a normal laptop.
+Synthetic normal and anomalous points scored with Isolation Forest and evaluated with ROC-AUC.
+
+Scores points with Isolation Forest and evaluates with ROC-AUC, the standard fraud/intrusion-detection pattern.
 
 ## Dataset
 
-Credit-card-fraud style synthetic data. See `DATASET.md` for the offline reproduction note.
+Reference dataset/theme: **Credit-card-fraud style synthetic data**. This project uses a small, deterministic, offline dataset (built-in scikit-learn data or a seeded synthetic equivalent) so it runs the same way on any laptop without external credentials or network access. See `prompts.md` for how this maps to the original prompt.
 
-## CRISP-DM summary
-
-1. **Business understanding:** define the decision or learning goal.
-2. **Data understanding:** inspect the generated or built-in dataset and target.
-3. **Data preparation:** create features and keep preprocessing separate from evaluation data where applicable.
-4. **Modeling:** train the selected model or algorithm.
-5. **Evaluation:** report the main metric and save a plot.
-6. **Deployment/communication:** generate `dashboard.html` and screenshot it.
-
-## Run
-
-From the repository root:
+## How to run
 
 ```bash
+pip install -r requirements.txt      # once, from the repository root
 python 06_anomaly_detection/src/experiment.py
 ```
 
-Open `06_anomaly_detection/dashboard.html` in a browser after the run.
+Then open `06_anomaly_detection/dashboard.html` in a browser.
 
-## Main files
+## Results (this run)
 
-- `src/experiment.py` - experiment entry point
-- `artifacts/metrics.json` - generated metrics
-- `artifacts/result.png` - result visualization
-- `dashboard.html` - student-friendly dashboard
-- `AUDIT_REPORT.md` - checks for leakage and reproducibility
-- `prompts.md` - reproduction prompt
+| Metric | Value |
+|---|---|
+| roc_auc | 1.0000 |
+| flagged | 96 |
+| true_anomalies | 50 |
+
+Full numbers are also saved to `artifacts/metrics.json` and `artifacts/result.png` every time the script runs, so this table never goes stale.
 
 ## Screenshots
 
-### Results view
-
 ![Dashboard results](docs/screenshots/dashboard_01.png)
-
-### CRISP-DM and audit view
-
 ![Dashboard details](docs/screenshots/dashboard_02.png)
 
-## YouTube walkthrough
+## Prompt
 
-Walkthrough video: **ADD_YOUTUBE_LINK_HERE**
-
-The exact speaking notes for this project are also included in the top-level `VIDEO_SCRIPT.md`.
+See [`prompts.md`](prompts.md) for the exact prompt used to build this project.
